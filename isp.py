@@ -1,3 +1,4 @@
+from math import ceil
 from statistics import NormalDist
 
 # Рассчитать гарантированное число испытаний (с округлением до ближайшего целого)
@@ -10,5 +11,5 @@ gamma = 0.07
 
 t = NormalDist().cdf((2 - gamma) / 2) ** -1
 print(t)
-K = round(t ** 2 / (4 * dg ** 2))
+K = ceil(t ** 2 / (4 * dg ** 2))
 print(K)
