@@ -15,8 +15,8 @@ C = np.array([
     [0, 0, 0, 0, 1.0]
 ])
 
-# pw1 = 0.7
-# pw2 = 0.3
+# pw1 = 0.5
+# pw2 = 0.5
 # m1 = np.array([2, 1, -1]).transpose()
 # m2 = np.array([2, -1, 2]).transpose()
 #
@@ -40,3 +40,4 @@ print('Ошибка 1 рода:')
 print(NormalDist(mu=mg1, sigma=np.sqrt(Dg1)).cdf(l0_))
 print('Ошибка 2 рода:')
 print(1 - NormalDist(mu=mg2, sigma=np.sqrt(Dg2)).cdf(l0_))
+print(pw1 * NormalDist(mu=mg1, sigma=np.sqrt(Dg1)).cdf(l0_) + pw2 * (1 - NormalDist(mu=mg2, sigma=np.sqrt(Dg2)).cdf(l0_)))
