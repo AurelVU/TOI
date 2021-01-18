@@ -8,6 +8,6 @@ dg = 0.1 * P_err
 gamma = 0.07
 
 t = norm.ppf((2 - gamma) / 2)
-print(t)
+
 K = ceil(t ** 2 * P_c * (1 - P_c) / dg ** 2)
 print(K)
